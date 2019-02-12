@@ -1,0 +1,9 @@
+#FROM GITHUB
+- src: https://github.com/cmakerstudio/cmaker-users.git
+  version: master
+  name: cmaker-users
+
+- src: https://github.com/cmakerstudio/cmaker-base-packages.git
+  version: master
+  name: cmaker-base-packages
+
