@@ -7,3 +7,6 @@
   version: master
   name: cmaker-base-packages
 
+- src: https://github.com/cmakerstudio/cmaker-motd.git
+  version: master
+  name: cmaker-motd
