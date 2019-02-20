@@ -1,0 +1,5 @@
+---
+
+- hosts: proxmox-localhost
+  roles:
+    - cmaker-proxmox-vm 

@@ -10,3 +10,8 @@
 - src: https://github.com/cmakerstudio/cmaker-motd.git
   version: master
   name: cmaker-motd
+
+- src: https://github.com/cmakerstudio/cmaker-proxmox-vm.git
+  version: master
+  name: cmaker-proxmox-vm
+
