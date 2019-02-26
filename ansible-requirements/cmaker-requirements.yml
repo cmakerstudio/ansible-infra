@@ -15,3 +15,10 @@
   version: master
   name: cmaker-proxmox-vm
 
+- src: https://github.com/cmakerstudio/cmaker-prometheus-node-exporter
+  version: master
+  name: cmaker-prometheus-node-exporter
+
+- src: https://github.com/cmakerstudio/cmaker-prometheus-server
+  version: master
+  name: cmaker-prometheus-server

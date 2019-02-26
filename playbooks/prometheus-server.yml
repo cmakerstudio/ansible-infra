@@ -1,0 +1,6 @@
+---
+
+- hosts: eyes.cmaker.studio
+  gather_facts: false
+  roles:
+    - cmaker-prometheus-server
