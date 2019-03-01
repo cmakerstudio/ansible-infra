@@ -1,6 +1,6 @@
 ---
 
-- hosts: servers
+- hosts: servers:proxmox-servers
   gather_facts: false
   roles:
     - cmaker-prometheus-node-exporter
