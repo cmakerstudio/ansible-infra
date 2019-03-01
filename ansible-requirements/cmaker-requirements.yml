@@ -22,3 +22,7 @@
 - src: https://github.com/cmakerstudio/cmaker-prometheus-server
   version: master
   name: cmaker-prometheus-server
+
+- src: https://github.com/cmakerstudio/cmaker-ntp
+  version: master
+  name: cmaker-ntp

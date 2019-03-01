@@ -16,3 +16,6 @@ deploy-node-exporter:
 
 deploy-prometheus-server:
 	ansible-playbook -i $(inventory_production) playbooks/prometheus-server.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-ntp:
+	ansible-playbook -i $(inventory_production) playbooks/ntp.yml --user=ansible-robot --become --vault-id ../vault-password

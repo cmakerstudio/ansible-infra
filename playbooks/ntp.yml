@@ -1,0 +1,6 @@
+---
+
+- hosts: servers
+  gather_facts: false
+  roles:
+    - cmaker-ntp
