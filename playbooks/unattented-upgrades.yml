@@ -3,7 +3,4 @@
 - hosts: servers
   gather_facts: false
   roles:
-    - cmaker-base-packages
-    - cmaker-users
-    - cmaker-motd
     - cmaker-unattented-upgrades

@@ -2,6 +2,9 @@ inventory_production = inventory/cmaker-prod.inv
 
 ## Production Management ##
 
+update-ansible-roles:
+	./update_playbooks.sh
+
 deploy-common-initial:
 	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=coldadmin --ask-pass --ask-become-pass --become --vault-id ../vault-password
 
@@ -19,3 +22,6 @@ deploy-prometheus-server:
 
 deploy-ntp:
 	ansible-playbook -i $(inventory_production) playbooks/ntp.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-unattented-upgrades:
+	ansible-playbook -i $(inventory_production) playbooks/unattented-upgrades.yml --user=ansible-robot --become --vault-id ../vault-password

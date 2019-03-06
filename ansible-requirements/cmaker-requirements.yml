@@ -26,3 +26,7 @@
 - src: https://github.com/cmakerstudio/cmaker-ntp
   version: master
   name: cmaker-ntp
+
+- src: https://github.com/cmakerstudio/cmaker-unattended-upgrades
+  version: master
+  name: cmaker-unattented-upgrades
