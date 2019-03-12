@@ -1,0 +1,8 @@
+---
+
+- hosts: kubernetes
+  roles:
+    - cmaker-users
+    - kubeadm-bootstrap
+  vars_files:
+    - ../inventory/group_vars/servers/vault.yml

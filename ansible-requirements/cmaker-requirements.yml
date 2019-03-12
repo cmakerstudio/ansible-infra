@@ -30,3 +30,7 @@
 - src: https://github.com/cmakerstudio/cmaker-unattended-upgrades
   version: master
   name: cmaker-unattented-upgrades
+
+- src: https://github.com/cmakerstudio/kubeadm-bootstrap
+  version: master
+  name: kubeadm-bootstrap

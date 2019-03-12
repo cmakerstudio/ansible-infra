@@ -8,6 +8,12 @@ update-ansible-roles:
 deploy-common-initial:
 	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=coldadmin --ask-pass --ask-become-pass --become --vault-id ../vault-password
 
+deploy-kubeadm-initial:
+	ansible-playbook -i $(inventory_production) playbooks/kubeadm-bootstrap.yml --user=root --ask-pass --vault-id ../vault-password
+
+deploy-kubeadm:
+	ansible-playbook -i $(inventory_production) playbooks/kubeadm-bootstrap.yml --user=ansible-robot --become --vault-id ../vault-password
+
 deploy-common:
 	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=ansible-robot --become --vault-id ../vault-password
 
