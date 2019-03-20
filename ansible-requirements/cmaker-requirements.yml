@@ -34,3 +34,7 @@
 - src: https://github.com/cmakerstudio/kubeadm-bootstrap
   version: master
   name: kubeadm-bootstrap
+
+- src: https://github.com/cmakerstudio/cmaker-lldp
+  version: master
+  name: cmaker-lldp

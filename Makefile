@@ -31,3 +31,6 @@ deploy-ntp:
 
 deploy-unattented-upgrades:
 	ansible-playbook -i $(inventory_production) playbooks/unattented-upgrades.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-lldp:
+	ansible-playbook -i $(inventory_production) playbooks/lldp.yml --user=ansible-robot --become --vault-id ../vault-password
