@@ -1,9 +1,7 @@
 ---
 
-- hosts: servers
+- hosts: proxmox-servers
   gather_facts: true
   roles:
     - cmaker-base-packages
     - cmaker-users
-    - cmaker-motd
-    - cmaker-unattented-upgrades

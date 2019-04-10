@@ -1,0 +1,7 @@
+---
+
+- hosts: raspberry
+  roles:
+    - cmaker-users
+    - cmaker-base-packages
+    - cmaker-ntp
