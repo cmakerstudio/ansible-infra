@@ -32,6 +32,12 @@ deploy-proxmox-common:
 deploy-proxmox-vm:
 	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm.yml
 
+deploy-proxmox-vm-dreamhack:
+	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm-dreamhack.yml --tags "deploy_dh_lab"
+
+delete-proxmox-vm-dreamhack:
+	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm-dreamhack.yml --tags "delete_dh_lab"
+
 deploy-node-exporter:
 	ansible-playbook -i $(inventory_production) playbooks/node-exporter.yml --user=ansible-robot --become --vault-id ../vault-password
 
