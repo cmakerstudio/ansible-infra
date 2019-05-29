@@ -39,6 +39,14 @@
   version: master
   name: cmaker-lldp
 
+- src: https://github.com/cmakerstudio/cmaker-gluster-client
+  version: master
+  name: cmaker-gluster-client
+
+- src: https://github.com/cmakerstudio/cmaker-blackbox-prometheus
+  version: master
+  name: cmaker-blackbox-prometheus
+
 #- src: https://github.com/cmakerstudio/cmaker-iptables
 #  version: master
 #  name: cmaker-iptables
