@@ -30,7 +30,7 @@ deploy-proxmox-common:
 	ansible-playbook -i $(inventory_production) playbooks/common-proxmox.yml --user=ansible-robot --become --vault-id ../vault-password
 
 deploy-proxmox-vm:
-	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm.yml
+	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm.yml --tags "deploy_cmaker"
 
 deploy-proxmox-vm-dreamhack:
 	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm-dreamhack.yml --tags "deploy_dh_lab"
