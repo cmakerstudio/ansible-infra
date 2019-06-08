@@ -55,3 +55,6 @@ deploy-unattented-upgrades:
 
 deploy-lldp:
 	ansible-playbook -i $(inventory_production) playbooks/lldp.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-kolla:
+	ansible-playbook -i $(inventory_production) playbooks/kolla-deployer.yml --user=ansible-robot --become --vault-id ../vault-password

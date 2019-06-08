@@ -1,0 +1,11 @@
+---
+
+#- hosts: kolla_controllers:kolla_computes:kolla_deployer
+#  roles:
+#    - cmaker-users
+#  vars_files:
+#    - ../inventory/group_vars/servers/vault.yml
+
+- hosts: kolla_deployer
+  roles:
+    - cmaker-kolla-deployer
