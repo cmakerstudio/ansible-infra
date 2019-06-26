@@ -1,0 +1,7 @@
+---
+
+- hosts: random01.cmaker.studio
+  gather_facts: false
+  roles:
+    #- cmaker-docker
+    - ansible-tower-role
