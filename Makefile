@@ -27,7 +27,7 @@ deploy-common:
 	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=ansible-robot --become --vault-id ../vault-password
 
 deploy-proxmox-common:
-	ansible-playbook -i $(inventory_production) playbooks/common-proxmox.yml --user=ansible-robot --become --vault-id ../vault-password --syntax-check
+	ansible-playbook -i $(inventory_production) playbooks/common-proxmox.yml --user=ansible-robot --become --vault-id ../vault-password
 
 deploy-proxmox-vm:
 	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm.yml --tags "deploy_cmaker"
