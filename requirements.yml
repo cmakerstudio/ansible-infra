@@ -47,6 +47,14 @@
   version: master
   name: cmaker-blackbox-prometheus
 
+- src: https://github.com/cmakerstudio/cmaker-docker
+  version: master
+  name: cmaker-docker
+
+- src: https://github.com/cmakerstudio/cmaker-kolla-deployer
+  version: master
+  name: cmaker-kolla-deployer
+
 #- src: https://github.com/cmakerstudio/cmaker-iptables
 #  version: master
 #  name: cmaker-iptables
