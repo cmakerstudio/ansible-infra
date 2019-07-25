@@ -61,3 +61,12 @@ deploy-kolla:
 
 deploy-tower:
 	ansible-playbook -i $(inventory_production) playbooks/ansible-tower.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-elk:
+	ansible-playbook -i $(inventory_production) playbooks/docker-elk.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-elastiflow:
+	ansible-playbook -i $(inventory_production) playbooks/elastiflow.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-docker:
+	ansible-playbook -i $(inventory_production) playbooks/docker.yml --user=ansible-robot --become --vault-id ../vault-password
