@@ -2,4 +2,4 @@
 
 - hosts: docker01.cmaker.studio
   roles:
-    - ansible-netflow
+    - ansible-traffic-stats

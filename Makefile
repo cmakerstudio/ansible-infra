@@ -68,5 +68,8 @@ deploy-elk:
 deploy-elastiflow:
 	ansible-playbook -i $(inventory_production) playbooks/elastiflow.yml --user=ansible-robot --become --vault-id ../vault-password
 
+deploy-stats:
+	ansible-playbook -i $(inventory_production) playbooks/trafficstats.yml --user=ansible-robot --become --vault-id ../vault-password
+
 deploy-docker:
 	ansible-playbook -i $(inventory_production) playbooks/docker.yml --user=ansible-robot --become --vault-id ../vault-password
