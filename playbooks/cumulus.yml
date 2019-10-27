@@ -1,0 +1,6 @@
+---
+
+- hosts: cumulus_routers
+  gather_facts: false
+  roles:
+    - cumulus-ansible

@@ -6,7 +6,7 @@ update-ansible-roles:
 	./update_playbooks.sh
 
 deploy-common-initial:
-	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=coldadmin --ask-pass --ask-become-pass --become --vault-id ../vault-password
+	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=root --ask-pass --ask-become-pass --become --vault-id ../vault-password
 
 deploy-proxmox-common-initial:
 	ansible-playbook -i $(inventory_production) playbooks/common-proxmox.yml --user=coldadmin --ask-pass --ask-become-pass --become --vault-id ../vault-password
@@ -73,3 +73,6 @@ deploy-stats:
 
 deploy-docker:
 	ansible-playbook -i $(inventory_production) playbooks/docker.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-cumulus:
+	ansible-playbook -i $(inventory_production) playbooks/cumulus.yml --user=cumulus --become --vault-id ../vault-password

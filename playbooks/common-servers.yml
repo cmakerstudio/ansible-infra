@@ -1,10 +1,10 @@
 ---
 
-- hosts: servers
+- hosts: kolla_all
   gather_facts: true
   roles:
-    - cmaker-base-packages
+    #- cmaker-base-packages
     - cmaker-users
-    - cmaker-motd
-    - cmaker-unattented-upgrades
-    - cmaker-gluster-client
+    #- cmaker-motd
+    #- cmaker-unattented-upgrades
+    #- cmaker-gluster-client

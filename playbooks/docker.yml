@@ -3,3 +3,4 @@
 - hosts: docker-hosts
   roles:
     - cmaker-docker
+    - cmaker-minio
