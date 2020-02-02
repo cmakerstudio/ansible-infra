@@ -1,6 +1,5 @@
 ---
 
-- hosts: docker-hosts
+- hosts: docker-hosts,rancher
   roles:
     - cmaker-docker
-    - cmaker-minio

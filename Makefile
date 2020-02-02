@@ -6,7 +6,7 @@ update-ansible-roles:
 	./update_playbooks.sh
 
 deploy-common-initial:
-	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=root --ask-pass --ask-become-pass --become --vault-id ../vault-password
+	ansible-playbook -i $(inventory_production) playbooks/common-servers.yml --user=coldadmin --ask-pass --ask-become-pass --become --vault-id ../vault-password
 
 deploy-proxmox-common-initial:
 	ansible-playbook -i $(inventory_production) playbooks/common-proxmox.yml --user=coldadmin --ask-pass --ask-become-pass --become --vault-id ../vault-password
@@ -30,7 +30,7 @@ deploy-proxmox-common:
 	ansible-playbook -i $(inventory_production) playbooks/common-proxmox.yml --user=ansible-robot --become --vault-id ../vault-password
 
 deploy-proxmox-vm:
-	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm.yml --tags "deploy_cmaker"
+	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm.yml --tags "deploy_cmaker" --vault-id ../vault-password
 
 deploy-proxmox-vm-dreamhack:
 	ansible-playbook -i $(inventory_production) playbooks/proxmox-vm-dreamhack.yml --tags "deploy_dh_lab"
@@ -76,3 +76,9 @@ deploy-docker:
 
 deploy-cumulus:
 	ansible-playbook -i $(inventory_production) playbooks/cumulus.yml --user=cumulus --become --vault-id ../vault-password
+
+deploy-kvm:
+	ansible-playbook -i $(inventory_production) playbooks/kvm.yml --user=ansible-robot --become --vault-id ../vault-password
+
+deploy-director:
+	ansible-playbook -i $(inventory_production) playbooks/tripleo-director.yml --user=ansible-robot --become --vault-id ../vault-password

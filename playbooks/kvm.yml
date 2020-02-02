@@ -1,0 +1,5 @@
+---
+
+- hosts: kvm01.cmaker.studio
+  roles:
+    - ansible-kvm-tripleo
